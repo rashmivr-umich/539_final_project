@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/illustrations/nut-1.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font embed code from Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Playground</title>
+</head>
+<body>
+    <header>
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+        <nav class="navigation">
+            <img src="images/illustrations/mumsi-logo-full.png" alt="MUMSI logo" id="logo">
+            <!-- convert logo to home page link -->
+            <!-- addition of logo is remaining -->
+            <div class="links_navigation">
+                <div>
+                    <a href="index.html" class = "nav_link">
+                        <!-- add icons and refine alt text for the same -->
+                        <img src="images/icons/home_white.svg" alt="home with door">
+                        <p>Home</p>
+                    </a>
+                </div>
+                <!-- Reference for dropdown structure
+                https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+                <div class="dropdown active">
+                    <!-- aria has pop-up: helps determine if it is a menu that opens up and is interactive -->
+                    <button class="dropbtn nav_link"  aria-haspopup="true" aria-expanded="false">
+                        <img src="images/icons/stadia_controller_white.svg" alt="gaming console">
+                        Playground
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="xn0.html">X and O</a>
+                      <a href="memorygame.html">Memory Game</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="game-container" id="main">
+        <h1 class="heading-1">Help MUMSI collect nuts!</h1>
+        <p>This is a two player game. One player plays as Mumsi to gather nuts and the other plays with leaves.</p>
+        <p class="player">Tic Tac Toe</p>
+        <div id="gameboard">
+            <div class="boardcell" id="0" tabindex="0"></div>
+            <!-- id is 0 because javascript is zero index based -->
+            <div class="boardcell" id="1" tabindex="0"></div>
+            <div class="boardcell" id="2" tabindex="0"></div>
+            <div class="boardcell" id="3" tabindex="0"></div>
+            <div class="boardcell" id="4" tabindex="0"></div>
+            <div class="boardcell" id="5" tabindex="0"></div>
+            <div class="boardcell" id="6" tabindex="0"></div>
+            <div class="boardcell" id="7" tabindex="0"></div>
+            <div class="boardcell" id="8" tabindex="0"></div>
+        </div>
+        <button id="restartBtn" class="button">Play Again</button>
+    </main>
+    <script src="js/xno_logic.js"></script>
+    <script src="js/index.js"></script>
+</body>
+<footer>
+    <p>
+    &copy; <span id="year"></span> All rights reserved.
+    </p>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+</footer>
+</html>

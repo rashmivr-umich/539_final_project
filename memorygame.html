@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/illustrations/nut-1.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font embed code from Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Memory Game</title>
+</head>
+<body>
+    <header>
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+        <nav class="navigation">
+            <img src="images/illustrations/mumsi-logo-full.png" alt="MUMSI logo" id="logo">
+            <!-- convert logo to home page link -->
+            <!-- addition of logo is remaining -->
+            <div class="links_navigation">
+                <div>
+                    <a href="index.html" class = "nav_link">
+                        <!-- add icons and refine alt text for the same -->
+                        <img src="images/icons/home_white.svg" alt="home with door">
+                        <p>Home</p>
+                    </a>
+                </div>
+                <!-- Reference for dropdown structure
+                https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+                <div class="dropdown active">
+                    <!-- aria has pop-up: helps determine if it is a menu that opens up and is interactive -->
+                    <button class="dropbtn nav_link"  aria-haspopup="true" aria-expanded="false">
+                        <img src="images/icons/stadia_controller_white.svg" alt="gaming console">
+                        Playground
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="xn0.html">X and O</a>
+                      <a href="memorygame.html">Memory Game</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="memory_game" id="main">
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/leaf-green.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/Mumsi-holding-nut.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/Mumsi-headset.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_sleeping.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/nut-1.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi-leaping.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_walking.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_sitting.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/leaf-green.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/Mumsi-holding-nut.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/Mumsi-headset.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_sleeping.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/nut-1.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi-leaping.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_walking.png" alt="a grean leaf">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_sitting.png" alt="a grean leaf">
+                    </div>
+                </div>
+            </div>
+            <!-- <ul class="cards">
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/leaf-green.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/Mumsi-holding-nut.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/Mumsi-headset.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_sleeping.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/nut-1.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi-leaping.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_walking.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_sitting.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/leaf-green.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/Mumsi-holding-nut.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/Mumsi-headset.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_sleeping.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/nut-1.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi-leaping.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_walking.png" alt="a grean leaf">
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="view front-view">
+                        <img src="images/icons/question_mark_80dp_A4522A_FILL0_wght400_GRAD0_opsz48.svg" alt="a grean leaf">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/illustrations/mumsi_sitting.png" alt="a grean leaf">
+                    </div>
+                </li>
+            </ul> -->
+        </div>
+    </main>
+</body>
+<footer>
+    <p>
+    &copy; <span id="year"></span> All rights reserved.
+    </p>
+</footer>
+<script src="js/memory.js"></script>
+</html>

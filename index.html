@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/illustrations/nut-1.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font embed code from Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>About Mumsi</title>
+</head>
+<body>
+    <header>
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+        <nav class="navigation">
+            <img src="images/illustrations/mumsi-logo-full.png" alt="MUMSI logo" id="logo">
+            <!-- convert logo to home page link -->
+            <!-- addition of logo is remaining -->
+            <div class="links_navigation">
+                <div class="active">
+                    <a href="index.html" class = "nav_link">
+                        <!-- add icons and refine alt text for the same -->
+                        <img src="images/icons/home_white.svg" alt="home with door">
+                        <p>Home</p>
+                    </a>
+                </div>
+                <!-- Reference for dropdown structure
+                https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+                <div class="dropdown">
+                    <!-- aria has pop-up: helps determine if it is a menu that opens up and is interactive -->
+                    <button class="dropbtn nav_link"  aria-haspopup="true" aria-expanded="false">
+                        <img src="images/icons/stadia_controller_white.svg" alt="gaming console">
+                        Playground
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="xn0.html">X and O</a>
+                      <a href="memorygame.html">Memory Game</a>
+                    </div>
+                </div>
+            </div>
+<!-- THIS IS OLD CODE:
+            <div class="nav_link">
+                <a href="xn0.html">
+                    <img src="images/icons/gamepad-2.svg" alt="">
+                    <p>Playground</p>
+                </a>
+            </div>
+            <div class="nav_link">
+                <a href="findmumsi.html">
+                    <img src="" alt="">
+                    <p>Find Mumsi</p>
+                </a>
+            </div> -->
+        </nav>
+    </header>
+    <main id="main">
+        <section class="hero-sec">
+            <h1 id="mumsi-title">
+                <!-- <span id="letter-1">M</span>
+                <span id="letter-2">U</span>
+                <span id="letter-3">M</span>
+                <span id="letter-4">S</span>
+                <span id="letter-5">I</span> -->
+                <!-- code on top is inaccessible, screenreader reads it as inidivdual letters -->
+                MUMSI
+                <!-- <img src="images/illustrations/mumsi_sitting_2.png" alt="" id="img-M">
+                <img src="images/illustrations/Mumsi-headset.png" alt="" id="img-U">
+                <img src="images/illustrations/mumsi-leaping.png" alt="" id="img-M-2">
+                <img src="images/illustrations/mumsi-climbing.png" alt="" id="img-S">
+                <img src="images/illustrations/nut-1.png" alt="" id="img-I"> -->
+                <img src="images/illustrations/mumsi-hero-sec.png" alt="squirrels playing in leaves and nuts">
+            </h1>
+        </section>
+        <section class="content-block-grid">
+            <h2 class="heading-2">A day in the life of Mumsi</h2>
+            <div class="content-block">
+                <div class="home-text-content-block">
+                    <h3>Early mornings</h3>
+                    <p>She begins her day by rolling around in her soft bed of leaves up in the tree till the glow of the morning sun tickles her heavy eyelids to pry them open. Once awake, she begins with a tour of the vast University of Michigan Campus to see if everything is in place. The last stop is her nut stash, where she checks her inventory to see if her cheeky neighbors have stolen any.</p>
+                </div>
+                <img src="images/illustrations/mumsi_sleeping.png" alt="Mumsi stretching in a bed of leaves">
+            </div>
+            <div class="content-block">
+                <div class="home-text-content-block">
+                    <h3>Breakfast</h3>
+                    <p>She begins her day with a hearty and nutty breakfast, full of vitamins and proteins.  Never work on a hungry stomach is something she truly believes in. This is when she realizes that she is late to her photoshoot.</p>
+                </div>
+                <img src="images/illustrations/mumsi_sitting.png" alt="Mumsi nibbling a nut">
+            </div>
+            <div class="content-block">
+                <div class="home-text-content-block">
+                    <h3>Working at UMSI</h3>
+                    <p>Being a celebrity, her major part of the day is spent in photoshoots sporting a blue and maize colored UMSI tee. She poses with VR headsets, UMSI laptops, in lab environments to promote the cutting-edge work done here at UMSI. You can always find her on the social media pages.</p>
+                </div>
+                <img src="images/illustrations/Mumsi-headset.png" alt="Mumsi wearing a virtual reality headset with UMSI logo on it">
+            </div>
+            <div class="content-block">
+                <div class="home-text-content-block">
+                    <h3>Nap time</h3>
+                    <p>Resting is an important part of life, Mumsi loves sleeping. She takes a short nap during the day of three hours to feel fresh the rest of her day. Her favorite napping spots are delicate branches of the majestic trees in the law quadrangle, UMich building ledges and the top of the clock tower (it has a breathtaking view).</p>
+                </div>
+                <img src="images/illustrations/mumsi_sleeping.png" alt="Mumsi sleeping on a branch with birds staring down at her">
+            </div>
+            <div class="content-block">
+                <div class="home-text-content-block">
+                    <h3>Nuts!</h3>
+                    <p>Winter always comes and she must be prepared for the unforgiving season in Michigan. Before the sky has an opportunity to lay a thick blanket of snow over the grass, she heads out to collect priceless nuts for the coming winter. Nut gathering takes up most of her day. Sniffing about, she gathers nuts and caches them in scattered places so that other squirrels do not steal them. To deceive the other squirrel who’s watching, she digs an empty hole, pretends to throw in some acorns and covers up the hole. She chases scurrying beetles and insects to have a fulfilling meal.</p>
+                </div>
+                <img src="images/illustrations/Mumsi-holding-nut.png" alt="Mumsi leaping">
+            </div>
+            <div class="content-block">
+                <div class="home-text-content-block">
+                    <h3>Chasing squirells</h3>
+                    <p>Resting is an important part of life, Mumsi loves sleeping. She takes a short nap during the day of three hours to feel fresh the rest of her day. Her favorite napping spots are delicate branches of the majestic trees in the law quadrangle, UMich building ledges and the top of the clock tower (it has a breathtaking view).</p>
+                </div>
+                <img src="images/illustrations/mumsi-leaping.png" alt="Mumsi chasing a squirell on a tree trunk">
+            </div>
+            <div class="content-block">
+                <div class="home-text-content-block">
+                    <h3>Goodnight Mumsi!</h3>
+                    <p>It has been a tiring day of work and now she prepares to fall asleep, to rise and shine well rested for the next day. Good night Mumsi!</p>
+                </div>
+                <img src="images/illustrations/mumsi_sleeping.png" alt="">
+            </div>
+        </section>
+    </main>
+</body>
+<footer>
+    <p>
+    &copy; <span id="year"></span> All rights reserved.
+    </p>
+    <!-- <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script> -->
+</footer>
+<script src="js/index.js"></script>
+</html>
