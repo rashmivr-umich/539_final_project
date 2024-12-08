@@ -277,6 +277,11 @@ Reference - https://www.youtube.com/watch?v=oZrp3Atkz18 */
     border-bottom: 2px solid var(--blue);
 }
 
+.boardcell p {
+    font-size: 1px;
+    visibility: hidden;
+}
+
 .boardcell:nth-of-type(3n) {
     border-right: none; /* removes border from right edge of gameboard*/
 }
