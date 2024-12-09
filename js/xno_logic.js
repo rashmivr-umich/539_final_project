@@ -7,6 +7,7 @@
 // To replace 'X' and 'O' text with images, UM-GPT was used to generate reference code
 
 // To make the game keyboard accesible, UM-GPT was used to generate reference code
+// TO make the game screen reader accessible, 
 
 // For updating player's turn content reference used: https://www.youtube.com/watch?v=AnmwHjpEhtA
 
@@ -33,6 +34,7 @@ let spaces = Array(9).fill(null) //Prevents player from clicking in a filled box
 const startGame = () => {
     boardcells.forEach(boardcell => boardcell.addEventListener('click', boxClicked));
     boardcells.forEach(boardcell => boardcell.addEventListener('keydown', keyPressed))
+    // boardcells.forEach(boardcell => boardcell.setAttribute('aria-live', `cell ${index + 1}`))
     player.textContent = `${currentPlayer}'s turn`
 }
 
@@ -47,6 +49,7 @@ function keyPressed(e) {
     }
 }
 
+
 function boxClicked(e) {
     const id = e.target.id //accessing the element that triggered the event
     if (!spaces[id]){
@@ -59,13 +62,22 @@ function boxClicked(e) {
 
         e.target.appendChild(img);
 
+        // Update aria-label for screen reader - suggested by UM-GPT
+        e.target.setAttribute('aria-label', `Cell ${parseInt(id) + 1} filled by ${currentPlayer}`);
+        // Adding parseInt reads the numeric digit as a number - reads as 'one' and not 'zero one'
+
+
         changePlayer(); //Updates content to show next player's turn
+        player.setAttribute('tabindex', '-1')
+        player.focus(); // Focus on the player element to announce next player
 
         if(playerHasWon() !== false){
             player.textContent = `${currentPlayer} has won! 🎉`
             let winningBlocks = playerHasWon() //returns the winning combination array
             console.log(winningBlocks)
-            winningBlocks.map(boardcell => boardcells[boardcell].style.backgroundColor = winnerIndicator) 
+            winningBlocks.map(boardcell => {boardcells[boardcell].style.backgroundColor = winnerIndicator;
+                boardcells[boardcell].setAttribute('aria-label', `${currentPlayer} has won`);})
+            player.focus(); // Focus on the player element to announce the winner
             spaces.fill('filled') //to stop player's from clicking more
             //color the winning cells - boardcell represents element from winningblocks array and is used as index for grabbing element from boardcells
             return //stop game after someone wins
@@ -73,6 +85,7 @@ function boxClicked(e) {
 
         if (isDraw()) {
             player.textContent = "It's a draw!"
+            player.focus(); // Focus on the player element to announce the winner
             return;
         }
 
@@ -121,9 +134,10 @@ restartBtn.addEventListener('click', restart)
 
 function restart () {
     spaces.fill(null)
-    boardcells.forEach(box => {
+    boardcells.forEach((box, index) => {
         box.innerHTML = ""
         box.style.backgroundColor = ""; // Clear background color
+        box.setAttribute('aria-label', `cell ${index + 1}`); // Reset aria-label with numeric values - suggested by UM-GPT
     })
     currentPlayer = NUT
 
