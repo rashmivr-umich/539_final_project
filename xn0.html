@@ -48,8 +48,9 @@
         <p>This is a two player game. One player plays as Mumsi to gather nuts and the other plays with leaves.</p>
         <p class="player">Tic Tac Toe</p>
         <div id="gameboard">
-            <div class="boardcell" id="0" tabindex="0" aria-label="cell 1" aria-live="assertive"></div>
+            <div class="boardcell" id="0" tabindex="0" aria-label="cell 1" aria-live="assertive" aria-role="game cell"></div>
             <!-- id is 0 because javascript is zero index based -->
+            <!-- aria-live set to assertive so that aria-label update gets read out before everything else -->
             <div class="boardcell" id="1" tabindex="0" aria-label="cell 2" aria-live="assertive"><p></p></div>
             <div class="boardcell" id="2" tabindex="0" aria-label="cell 3" aria-live="assertive"><p></p></div>
             <div class="boardcell" id="3" tabindex="0" aria-label="cell 4" aria-live="assertive"></div>
