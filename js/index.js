@@ -1,5 +1,5 @@
 
-// CREATING ACCESSIBLE dropdown
+// version 1.2 - CREATING ACCESSIBLE dropdown
 
 // source code referenced and modified from: w3c schools dropdown
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
@@ -82,8 +82,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
+
+// ______________________________________________________________________________________________
+
+// Code for changing logo - code to change logo source based on screen width was generated using Github Copilot
+// this code changes the logo source when the screen size is greater than 560px - this not desktop specific
+
+const viewportWidth = window.innerWidth;
+console.log(`view port width = ${viewportWidth}`);
+const logo = document.getElementById("logo");
+const logoMobile = "images/illustrations/mumsi-logo.png";
+const logoDesktop = "images/illustrations/mumsi-logo-full.png";
+
+function changeLogo () {
+    if (window.innerWidth > 560) {
+        logo.src = logoDesktop;
+        logo.style.width = "120px";
+        logo.style.height = "auto";
+    } else {
+        logo.src = logoMobile;
+        logo.style.width = "40px";
+        logo.style.height = "auto";
+    }
+}
+
+window.addEventListener("resize", changeLogo);
+
+changeLogo();
+
+// function changeLogoBasedOnMediaQuery(mediaQuery) {
+//     const logo = document.querySelector('#logo');
+//     if (mediaQuery.matches) {
+//         // If the media query matches the desktop size, change to the desktop logo
+//         logo.src = 'images/illustrations/mumsi-logo-full.png';
+//     } else {
+//         // If the media query does not match (mobile size), use the mobile logo
+//         logo.src = 'images/illustrations/mumsi-logo.png';
+//     }
+// }
+
+// // Define a media query for desktop
+// const desktopMediaQuery = window.matchMedia('(min-width: 920px)');
+
+// // Call the function initially to set the correct logo on page load
+// changeLogoBasedOnMediaQuery(desktopMediaQuery);
+
+// desktopMediaQuery.addEventListener('change', (event) => {
+//     changeLogoBasedOnMediaQuery(event);
+// });
+
+
+
 // ___________________________________________________________________________________________
-// OLD CODE - THE FOLLOWING CODE IS INACCESSIBLE
+// OLD CODE version 1.1 - THE FOLLOWING CODE IS INACCESSIBLE
 
 
 // source code referenced and modified from: w3c schools dropdown

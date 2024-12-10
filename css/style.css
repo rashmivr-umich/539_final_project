@@ -110,6 +110,27 @@ footer p{
     max-width: 390px;
 }
 
+/* Another way of centering horizontally */
+/* .hero-sec {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#mumsi-title {
+    z-index: 2;
+}
+
+.hero-sec img {
+    z-index: 3;
+    margin-top: -515px;
+    margin-left: -2%;
+    max-width: 700px;
+} */
+
+
 /* #mumsi-title #img-M {
     width: 100px;
     height: auto;
@@ -328,9 +349,16 @@ Reference - https://www.youtube.com/watch?v=oZrp3Atkz18 */
 /* _______________________________________________________________________________________ */
 /* ----STYLING THE MEMORY GAME--- */
 
+/* adding focus state to each card */
+.card:focus-visible {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
 /* making display as flex of the body */
-.memory_game {
+.memorygame {
     display: flex;
+    flex-flow: nowrap column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -339,9 +367,13 @@ Reference - https://www.youtube.com/watch?v=oZrp3Atkz18 */
 
 /* styling the overall container */
 .container {
-    height: 480px;
-    width: 480px;
-    background-color: var(--maize);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--maize);
+    height: 320px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border-radius: 12px;
 }
 
@@ -354,11 +386,10 @@ Reference - https://www.youtube.com/watch?v=oZrp3Atkz18 */
 
 /* styling the cards holder container */
 .cards{
-    height: 100%;
-    width: 100%;
+    height: 280px;
+    width: 280px;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 24px;
 }
 
 /* styling size of each card */
@@ -367,7 +398,7 @@ Reference - https://www.youtube.com/watch?v=oZrp3Atkz18 */
 .cards .card{
     cursor: pointer;
     position: relative;
-    perspective: 800px;
+    perspective: 1000px;
     transform-style: preserve-3d;
     height: calc(100% / 4 - 10px);
     width: calc(100% / 4 - 10px);
@@ -375,26 +406,96 @@ Reference - https://www.youtube.com/watch?v=oZrp3Atkz18 */
 /* note: we added preserve 3d here so that all the children elements in .card which are front and back view 
 maintain their 3d position and do not get affected by the perspective */
 
+
+/* Adding shake animation */
+.card.shake{
+    animation: shake 0.35s ease-in-out;
+  }
+  @keyframes shake {
+    0%, 100%{
+      transform: translateX(0);
+    }
+    20%{
+      transform: translateX(-13px);
+    }
+    40%{
+      transform: translateX(13px);
+    }
+    60%{
+      transform: translateX(-8px);
+    }
+    80%{
+      transform: translateX(8px);
+    }
+  }
+  
 /* Note: to be able make the position absolute for each view, relative position is added to the parent element i.e. .card */
+/* user-select none and pointer-event none is added so that only card is interactive, not the content inside it */
 .cards .card .view{
     height: 100%;
     width: 100%;
+    user-select: none;
+    pointer-events: none;
     position: absolute;
+    background: var(--white);
     border-radius: 8px;
+    backface-visibility: hidden; /*keeping the back-side invisible because the card flips more that 90deg in 3-d*/
+    transition: transform 0.25s linear;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-/* flipping back-view on y-axis  */
+.card .front-view img{
+    max-width: 20px;
+}
+
+/* flipping back-view image on y-axis and keeping it hidden */
 .card .back-view{
     transform: rotateY(-180deg);
 }
 
 .card .back-view img{
-    max-width: 80px;
+    max-width: 40px;
 }
 
-.card:hover .back-view{
+.card.flip .front-view{
+    transform: rotateY(180deg);
+  }
+  .card.flip .back-view{
     transform: rotateY(0);
+  }
+
+  /* styling the heading */
+.memorygame .heading-1 {
+    font-size: 40px;
+    letter-spacing: normal;
+    font-weight: 700;
+    width: 70%;
+    padding-bottom: 40px;
+}
+
+.memorygame p {
+    width: 70%;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+/* hiding front question mark and showing back-view image when card is flipped
+.card.flip .front-view{
+    transform: rotateY(180deg);
+}
+  .card.flip .back-view{
+    transform: rotateY(0);
+} */
+
+@media screen and (prefers-reduced-motion: reduce){
+    .card.shake{
+        animation: none;
+      }
+
+    .cards .card .view{
+        transition: none;
+    }
+
 }
 
 /* ________________________________________________________________________________ */
@@ -509,17 +610,53 @@ maintain their 3d position and do not get affected by the perspective */
     }
 
 
-.game-container {
-    padding: 60px;
-    height: 100vh;
-}
+    .game-container {
+        padding: 60px;
+        height: 100vh;
+    }
 
-#gameboard {
-    width: 480px;
-}
+    #gameboard {
+        width: 480px;
+    }
 
-.boardcell {
-    height: 160px;
-    width: 160px;
-}
+    .boardcell {
+        height: 160px;
+        width: 160px;
+    }
+
+    /* _______________________________________________________________________________________ */
+    /* ----STYLING THE MEMORY GAME--- */
+
+    /* styling the cards holder container */
+    .cards{
+        height: 400px;
+        width: 400px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card .front-view img{
+        max-width: 32px;
+    }
+
+    .card .back-view img{
+        max-width: 72px;
+    }
+    .container {
+        height: 480px;
+        width: 480px;
+    }
+
+    .memorygame .heading-1 {
+        font-size: 80px;
+        font-weight: 700;
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .memorygame p {
+        width: 70%;
+        text-align: center;
+        padding-bottom: 80px;
+    }
 }
