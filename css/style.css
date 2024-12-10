@@ -273,7 +273,7 @@ Reference - https://www.youtube.com/watch?v=oZrp3Atkz18 */
 
 .game-container {
     padding: 40px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -655,7 +655,7 @@ maintain their 3d position and do not get affected by the perspective */
     }
 
     .memorygame p {
-        width: 70%;
+        width: 7%;
         text-align: center;
         padding-bottom: 80px;
     }
